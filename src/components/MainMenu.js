@@ -4,6 +4,7 @@ import { styled } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 import { useNavigate } from "react-router-dom";
+const { ipcRenderer } = require("electron");
 const VisuallyHiddenInput = styled("input")({
   clip: "rect(0 0 0 0)",
   clipPath: "inset(50%)",
@@ -54,8 +55,12 @@ const MainMenu = () => {
             onChange={(event) => image_upload(event.target.files[0])}
           />
         </MainMenuButton>
-        <MainMenuButton>Open the gallery</MainMenuButton>
-        <MainMenuButton>Quit App</MainMenuButton>
+        <MainMenuButton onClick={() => navigate("/gallery")}>
+          Open the gallery
+        </MainMenuButton>
+        <MainMenuButton onClick={() => ipcRenderer.invoke("closeApp")}>
+          Quit App
+        </MainMenuButton>
       </div>
     </div>
   );

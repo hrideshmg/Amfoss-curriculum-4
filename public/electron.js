@@ -17,8 +17,8 @@ function createWindow() {
   mainWindow.loadFile(path.join(__dirname, "../build/index.html"));
 }
 
-ipcMain.handle("open_image", () => {
-  console.log("INVOKE RECIEVED!");
+ipcMain.handle("closeApp", () => {
+  app.quit();
 });
 
 // This method will be called when Electron has finished

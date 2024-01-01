@@ -1,5 +1,5 @@
 body {
-  background-color: #040D12;
+  background-color: #040d12;
 }
 .menu_container {
   display: flex;
@@ -14,7 +14,7 @@ body {
 }
 .main_container {
   display: flex;
-  flex-direction:  column;
+  flex-direction: column;
   align-items: center;
   align-content: center;
   text-align: center;
@@ -33,11 +33,11 @@ body {
   gap: 2em;
 }
 
-.image{
+.image {
   max-width: 60vw;
   max-height: auto;
   border: solid;
-  border-color: #183D3D;
+  border-color: #183d3d;
   border-radius: 1em;
   border-width: 0.4em;
 }
@@ -46,3 +46,19 @@ body {
   display: flex;
   gap: 1em;
 }
+
+.nav_container {
+  display: flex;
+  align-items: left;
+  width: 100%;
+  margin: 3em;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.action_container {
+  display: flex;
+  gap: 1em;
+}
+
