@@ -90,6 +90,34 @@ const Editor = () => {
           </FilterButton>
           <FilterButton
             variant="contained"
+            onClick={() =>
+              setFilter(
+                "contrast(250%) brightness(120%) saturate(200%) grayscale(10%)",
+              )
+            }
+          >
+            Deepfry
+          </FilterButton>
+          <FilterButton
+            variant="contained"
+            onClick={() => setFilter("contrast(150%)")}
+          >
+            Boost Contrast
+          </FilterButton>
+          <FilterButton
+            variant="contained"
+            onClick={() => setFilter("sepia(80%)")}
+          >
+            Sepia
+          </FilterButton>
+          <FilterButton
+            variant="contained"
+            onClick={() => setFilter("brightness(150%)")}
+          >
+            Brighten
+          </FilterButton>
+          <FilterButton
+            variant="contained"
             onClick={() => setFilter("blur(5px)")}
           >
             Blur
@@ -103,7 +131,7 @@ const Editor = () => {
           >
             Actions:{" "}
           </Typography>
-          <ActionButton onClick={addToGallery}>Add To Galary</ActionButton>
+          <ActionButton onClick={addToGallery}>Add To Gallery</ActionButton>
           <ActionButton onClick={downloadImage}>Download Image</ActionButton>
         </div>
       </div>

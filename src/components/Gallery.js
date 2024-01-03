@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "@mui/material";
+import { Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { useGalleryContext } from "./GalleryContext";
 
@@ -30,8 +31,16 @@ const Gallery = () => {
     navigate("/");
   }
   return (
-    <div className="gallery_container">
-      <div className="gallery_grid">
+    <div>
+      <Typography
+        align="center"
+        color="white"
+        variant="h2"
+        sx={{ caretColor: "transparent", textDecoration: "underline" }}
+      >
+        Gallery
+      </Typography>
+      <div className="gallery_container">
         {state.images.map((image) => {
           const imageUrl = URL.createObjectURL(image);
           return <img src={imageUrl} />;
